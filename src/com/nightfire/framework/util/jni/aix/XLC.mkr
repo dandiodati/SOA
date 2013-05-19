@@ -1,0 +1,21 @@
+#
+# Copyright(c) 2000 NightFire Software, Inc.
+# All rights reserved.
+#
+# xlC rules for NightFire.mk
+#******************************************************************************
+
+#
+# Compiler commands, etc
+#
+
+CC = xlC_r
+MAKE_DEPEND = $(CC) -M $(CFLAGS)
+ARCHIVE = ar -r
+SHARCHIVE = $(CC) $(LDFLAGS) -o
+LD = ld
+
+# add CWD to include path
+CFLAGS += -I.
+
+LDFLAGS = -bnoentry -bM:SRE -lc_r -G -bexpall

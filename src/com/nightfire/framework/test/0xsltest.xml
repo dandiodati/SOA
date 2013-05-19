@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<MESSAGE>
+
+<SEGMENT ID='REF'>
+        <DATAELEMENT ID='REF01' value='2I'/>
+        <DATAELEMENT ID='REF02' value='19980911L00002'/>
+        <DATAELEMENT ID='REF03' value='LSRNO'/>
+</SEGMENT>
+
+
+<SEGMENT ID='REF'>
+        <DATAELEMENT ID='REF01' value='XX'/>
+        <DATAELEMENT ID='REF02' value='19980911L99999'/>
+        <DATAELEMENT ID='REF03' value='LSRNO'/>
+</SEGMENT>
+
+<LOOP ID='PO1'> 
+
+        <SEGMENT ID='PO1'>
+          <DATAELEMENT ID='PO101' value='1'>
+          </DATAELEMENT>
+        </SEGMENT>
+
+        <SEGMENT ID='SI'>
+          <DATAELEMENT ID='SI01' value='TI'>
+          </DATAELEMENT>
+          <DATAELEMENT ID='SI02' value='CM'>
+          </DATAELEMENT>
+          <DATAELEMENT ID='SI03' value='70/LXQD/163010/084/PT'>
+          </DATAELEMENT>
+        </SEGMENT>
+
+        <SEGMENT ID='SI'>
+          <DATAELEMENT ID='SI01' value='TI'>
+          </DATAELEMENT>
+          <DATAELEMENT ID='SI02' value='XX'>
+          </DATAELEMENT>
+          <DATAELEMENT ID='SI03' value='99/LXQD/163010/084/PT'>
+          </DATAELEMENT>
+        </SEGMENT>
+
+        <LOOP ID='PID'>
+
+          <SEGMENT ID='PID'>
+            <DATAELEMENT ID='PID01' value='X'>
+            </DATAELEMENT>
+            <DATAELEMENT ID='PID03' value='TI'>
+            </DATAELEMENT>
+            <DATAELEMENT ID='PID04' value='CFA'>
+            </DATAELEMENT>
+            <DATAELEMENT ID='PID05' value='01/26NL/0001/SJVACA11/SNVACA11'>
+            </DATAELEMENT>
+            <DATAELEMENT ID='PID07'>
+            </DATAELEMENT>
+            <DATAELEMENT ID='PID08'>
+            </DATAELEMENT>
+          </SEGMENT>
+
+        </LOOP>
+
+        <SEGMENT ID='REF'>
+          <DATAELEMENT ID='REF01' value='IX'>
+          </DATAELEMENT>
+          <DATAELEMENT ID='REF02' value='1'>
+          </DATAELEMENT>
+          <DATAELEMENT ID='REF03' value='LNUM'>
+          </DATAELEMENT>
+        </SEGMENT>
+
+      </LOOP>
+
+
+</MESSAGE>

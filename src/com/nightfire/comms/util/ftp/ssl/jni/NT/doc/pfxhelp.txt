@@ -1,0 +1,47 @@
+HELP FOR EASYACCESS PARSEPFX UTILITY PROGRAM
+
+To use EasyAccess to send and receive files with the IBM Global Network
+using Secure Sockets Layer (SSL), you must have an SSL certificate.
+
+IBM will provide you with an SSL certificate when you subscribe to the
+IBM Global Network and receive your account, userid (mailbox) and password.
+
+Typically, IBM distributes SSL certificates via floppy disk, with the
+password required to install the certificate sent under separate cover.
+
+When you have received the certificate file and password from IBM, you
+may use this utility program to install the certificate.  Once the certificate
+is installed, you may send and receive files using the IBM Global Network.
+
+
+INSTALLATION PROCEDURE
+
+To install the certificate you need to enter two pieces of information:
+- the full filename of the Input Key File, and
+- the Key File Password
+
+The Input Key File is located on the floppy disk you received from IBM.
+It is normally located in the "KEYS" sub-directory on the floppy disk.
+The Input Key File is normally given a name corresponding to your IGN USERID
+followed by a three character numeric extension; for example, "myuserid.001".
+You may either type in the Input Key File's directory and filename,
+or click on the yellow Folder icon to browse for the filename.
+
+The Key File Password is the password sent to you from IBM under
+separate cover.  It is normally an 8-digit value.  Simply type this
+value into the Key File Password field.
+
+Once you have entered the Input Key File and the Key File Password,
+click OK, and your SSL certificate will be installed, and the message
+"Key Import Successful" will be displayed.
+
+
+WHAT TO DO IF PROBLEMS ARISE
+
+If your certificate does not install properly, an error message will be
+displayed.  Make sure you have correctly entered the full Input Key File
+name and the Key File Password and try again.
+
+You may contact the Product Support team at Comm-Press, Inc. at 972-550-7694
+if you have questions concerning this program.
+

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/activation.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/adapter.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/antlr.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/aqapi.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/avalon.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/axis.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/batik.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/bsf.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/commonmgr.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/commons-cli-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/commons-discovery-0.2.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/commons-net-1.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/comms.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/cryptix-asn1.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/ejb_mgrcore.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/engine.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/fop.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/gateway.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/j2ee.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/jakarta-oro-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/jaxen-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/jce1_2-do.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/jmscommon.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/js.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/ldapjdk.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/mail.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/mgrcore.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/neustar_soa.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/neustar_soa_batch.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/nfcommon.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/nfsecurity.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/nsplatform.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/omscommon.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/ons.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/opensaml-1.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/orai18n.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/Phaos_SSLava.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/poi-3.2-FINAL-20081019.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/quartz-all-1.5.2.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/saaj.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/soamgr.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/spicommon.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/ss.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/tools.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/wsdl4j-1.5.1.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/wss4j.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/xmlsec-1.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/endorsed/avalon-framework-4.1.5.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/endorsed/jacorb.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/endorsed/logkit-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/endorsed/serializer.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/endorsed/xalan.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/endorsed/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoa/basicsoa/lib/endorsed/xml-apis.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/webapps/manager/WEB-INF/lib/catalina-manager.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/webapps/manager/WEB-INF/lib/commons-fileupload-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/catalina.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/catalina-ant.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/catalina-ant-jmx.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/catalina-cluster.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/catalina-optional.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/catalina-storeconfig.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/commons-modeler-2.0.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/servlets-default.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/servlets-invoker.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/servlets-webdav.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/tomcat-ajp.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/tomcat-apr.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/tomcat-coyote.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/tomcat-http.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/tomcat-jkstatus-ant.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/tomcat/server/lib/tomcat-util.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/lib/neustar_soa.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/lib/nfcommon.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/lib/nfsecurity.jar"/>
+	<classpathentry kind="lib" path="D:/projects/basicsoagui/basicsoagui/lib/nsplatform.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

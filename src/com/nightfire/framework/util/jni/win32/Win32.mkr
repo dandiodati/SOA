@@ -1,0 +1,121 @@
+#
+# Copyright(c) 2000 NightFire Software, Inc.
+# All rights reserved.
+#
+# SunOS/Solaris rules for NightFire.mk
+#******************************************************************************
+
+# various extensions
+OBJ_EXT := .obj
+OBJ_EXT := $(strip $(OBJ_EXT))
+
+DEP_EXT := .d
+DEP_EXT := $(strip $(DEP_EXT))
+
+STLIB_SUFF := .lib
+STLIB_SUFF := $(strip $(STLIB_SUFF))
+
+SHLIB_SUFF := .dll
+SHLIB_SUFF := $(strip $(SHLIB_SUFF))
+
+PLATFORM = NT40
+
+#
+# Compiler commands, etc
+#
+
+CC = cl /nologo
+ARCHIVE = lib /nologo /out:
+LD = link /nologo
+SHARCHIVE = $(LD) /DLL $(LDFLAGS) /OUT:
+
+#
+# Change compiler flags from UNIX-style to VC++
+#
+
+# include paths
+CFLAGS := $(patsubst -I%,/I%,$(CFLAGS))
+
+# defines
+CFLAGS := $(patsubst -D%,/D%,$(CFLAGS))
+
+# extra flags to turn on
+CFLAGS += /DWIN32 /TP /GX /I.
+
+# library paths
+LDFLAGS := $(patsubst -L%,/LIBPATH:%,$(LDFLAGS))
+LDFLAGS += /LIBPATH:$(MSVCDIR)/lib
+
+# libraries
+LIBRARIES := $(patsubst -l%,%.lib,$(LIBRARIES))
+
+#
+# Import Library Name
+#
+
+ifdef SHLIB
+ifeq (,$(strip $(IMPLIB)))
+IMPLIB = $(TARGET_LOC)/import/$(SHLIB).lib
+endif
+endif
+
+#
+# Thread safety flags
+#
+
+ifneq (,$(strip $(THREADSAFE)))
+CFLAGS += /MT
+SH_DEF_LIB = MSVCRT.LIB
+else
+CFLAGS += /ML
+SH_DEF_LIB = LIBC.LIB
+endif
+
+#
+# Definitions
+#
+
+RMDIR = rm -rf
+PERL = perl
+
+# If any part of the target directory does not exist, creates it
+define MAKE_DIR
+	$(BEQUIET)if [ ! -d $(@D) ] ; then echo Creating directory $(@D) ...; \
+		mkdir -p $(@D) ; fi
+endef
+
+# dependency generation
+define GENERATE_DEPEND
+	@echo Generating dependencies for $(notdir $<)...
+	$(MAKE_DIR)
+	$(BEQUIET)touch $@
+endef
+
+# source compilation to object files
+define GENERATE_OBJECT
+	@echo Compiling $(<F)
+	$(MAKE_DIR)
+	$(BEQUIET)$(CC) $(CFLAGS) /c /Fo$@ $<
+endef
+
+# static library generation
+define GENERATE_ARCHIVE
+	@echo Creating library $(@F)
+	$(MAKE_DIR)
+	$(BEQUIET)$(ARCHIVE)$@ $^
+endef
+
+# shared library generation
+define GENERATE_SHARCHIVE
+	@echo Creating shared library $(@F)
+	$(MAKE_DIR)
+	$(BEQUIET)mkdir -p $(dir $(IMPLIB))
+	$(BEQUIET)$(SHARCHIVE)$@ /IMPLIB:$(IMPLIB) $^ $(LIBRARIES)
+endef
+
+# executable generation
+define GENERATE_EXEC
+	@echo Creating executable $(@F)
+	$(MAKE_DIR)
+	$(BEQUIET)$(LD) $(LDFLAGS) /OUT:$@ $^ $(LIBRARIES)
+endef

@@ -1,0 +1,7 @@
+To make the logging libraries, use make as normal (its makefile is Makefile).
+
+To make the process info libraries, use make -f Makefile.procinfo (its
+makefile is Makefile.procinfo).
+
+Something I would have like to know when I had to use this:
+The RULES environment variable has to be set to the directory containing the rules you want to use (e.g. unix if you're on solaris, etc...).

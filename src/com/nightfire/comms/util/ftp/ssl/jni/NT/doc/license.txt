@@ -1,0 +1,296 @@
+COMM-PRESS, INC.
+
+COMM-PRESS PROGRAM LICENSE AGREEMENT
+
+THIS AGREEMENT COVERS SOFTWARE LICENSED FROM COMM-PRESS EITHER 
+DOWNLOADED FROM COMM-PRESS' WEBSITE OR DELIVERED TO LICENSEE 
+VIA ANOTHER MEDIA.  IF YOU COPY AND/OR INSTALL THE SOFTWARE 
+PROGRAM COVERED BY THIS LICENSE, YOU AGREE TO THE TERMS AND 
+CONDITIONS OF THIS AGREEMENT.  IF YOU DOWNLOADED SOFTWARE 
+FROM COMM-PRESS' WEBSITE, YOU AGREE TO PAY APPLICABLE LICENSE 
+FEES AT THE TIME YOU DOWNLOAD THE SOFTWARE.  IF YOU RECEIVED 
+THE SOFTWARE VIA OTHER MEDIA, THEN YOU MUST PAY APPLICABLE 
+LICENSE FEES OR RETURN THE MEDIA, DESTROYING ALL COPIES 
+WITHIN 30 DAYS OF RECEIPT.
+
+Comm-Press Program(s) is/are licensed, not sold. 
+Comm-Press, Inc. grants you a non-exclusive license for the 
+Program(s) only in the country where you acquired the Program. 
+You obtain no rights other than those granted you under this 
+license. You acknowledge that the Software is the sole and 
+exclusive property of Comm-Press.  By accepting the license, 
+you do not become the owner of the Software, but you do have 
+the right to use the Software in accordance with this 
+Agreement.  The term "Program" means the object code version 
+of the Software, including the original and all whole or 
+partial copies of it, including modified copies or portions 
+merged into other programs, and associated documentation. 
+Comm-Press retains title to the Program. Comm-Press owns, 
+or has a license from the owner of, copyrights in the Program. 
+You are responsible for the selection of the Program and for 
+the installation of, use of, and results obtained from, the 
+Program. The section, in the included documentation, relating 
+to Comm-Press Program(s) contains instructions on the use of 
+these Program(s).
+
+1. License. Under this license, you may: 
+1) use the Program on only one machine at any one time; 
+2) copy the Program for backup; and 
+3) transfer the possession of the Program to another party, 
+   except as noted in ENCRYPTION AND EXPORT CONTROLS 
+   Paragraphs 9 and 10 below.  If you transfer the Program(s), 
+   you must transfer a copy of this license, all other 
+   documentation and at least one complete, unaltered copy of 
+   the Program to the other party. You must, at the same time, 
+   either transfer all your other copies of the Program to the 
+   other party or destroy them. Your license is then terminated. 
+   The other party agrees to these terms and conditions by its 
+   first use of the Program. Copyright notice(s) must be 
+   reproduced on each copy, or partial copy, of the Program.
+
+Under this license, you may not: 
+1) use, copy, modify, merge, or transfer copies of the Program 
+except as provided in this license; 2) reverse assemble or 
+reverse compile the Program; or 3) sub-license, rent, lease, 
+or assign the Program.  Comm-Press retains title to the copy 
+of the Software and any copies made from it.  The Software is 
+proprietary to Comm-Press and contains confidential, unpublished 
+information and trade secrets developed or acquired by Comm-Press. 
+All applicable rights, patents, copyrights, trademarks, and trade 
+secrets in the Software or any modifications made at Customer's 
+request are and shall remain the property of Comm-Press
+
+2. License Fees and Taxes. Customer shall pay license fees via 
+credit card, at the time the Software is downloaded.  If Software 
+is obtained on a  CD-ROM disk, then Customer shall pay license 
+fees upon receipt of Software and associated invoice.
+
+Remit To:     Comm-Press, Inc.
+              Attn: Sales 
+              2324 Gateway Drive
+              Irving, TX  75063 
+              or Authorized Comm-Press
+                 Reseller Providing Product 
+
+Licensed Product/System  
+
+SecureAccess2000 Suite  Win95/98/NT Client *
+   (one copy of KeyManager2000, EasyAccess2000, Comm-Press 4.4)
+SecureAccess2000 Suite Unix &OS/400 *
+   (one copy of KeyManager2000, EasyAccess2000, Comm-Press 4.4)
+SecureAccess2000 Suite MVS *
+   (one copy of KeyManager2000, EasyAccess2000, Comm-Press 4.4)
+
+KeyManager2000 Certificate Authority/Trading Partner Administration
+
+EasyAccess2000 Client for MVS (with Comm-Press 4.4) **
+EasyAccess2000 Client for AIX/HPUX/Sun/SCO Unix (with Comm-Press 4.4) **
+EasyAccess2000 Client for OS/400 or NT Server (with Comm-Press 4.4) **
+EasyAccess2000 Client for Win95/WinNT Client (with Comm-Press 4.4)**
+    The above include:
+      Comm-Press data compression/ X12.58/SSL 3.0 client/utilities
+
+EasyAccess2000 Client for MVS (with Comm-Press 3.4)
+EasyAccess2000 Client for AIX/HPUX/Sun/SCO Unix  (with Comm-Press 3.4)
+EasyAccess2000 Client for OS/400 or NT Server (with Comm-Press 3.4)
+EasyAccess2000 Client for Win95/WinNT Client (with Comm-Press 3.4)
+    The above include:
+           Comm-Press data compression/SSL 3.0 client/utilities
+
+Comm-Press 4.4 MVS/VM/VSE
+Comm-Press 4.4 MVS/VM/VSE Distribution Copy ***
+Comm-Press 4.4 AIX/HPUX/Sun/OS400/NT Server
+Comm-Press 4.4 Windows Client
+    The above include:
+           Comm-Press data compression X12.58/Smime/EDIFACT Utilities
+ 
+Comm-Press 3.4 MVS/VM/VSE
+Comm-Press 3.4 MVS/VM/VSE Distribution Copy ***
+Comm-Press 3.4 AIX/HPUX/Sun/OS400/Tandem/NT Server
+Comm-Press 3.4 DOS,OS/2,Windows Client
+    The above include:
+            Comm-Press data compression Utilities only
+
+Licenses Include Telephone Enabling/Install Assistance - 
+            One Occurrence
+
+*   SecureAccess2000 includes X.509 Certificate Services, 
+    Certificate Authority Services and Key Management Services.
+**  EasyAccess2000  includes X.509 Certificate Services; 
+    a KeyManager 2000 is required to provide Certificate 
+    Authority Services.
+*** Distributed License may be used only in communications 
+    with fully licensed Comm-Press User(s).
+
+The obligation to pay is established by acceptance of the 
+terms and conditions of this agreement which is tendered by 
+installing licensed software. The accompanying invoice for 
+the Software Program identifies the product licensed and terms 
+of payment of license and first year maintenance fees.  
+You shall, in addition to the amounts payable under this 
+Agreement, pay all sales and other taxes, federal, state 
+and otherwise however designated, which are levied or imposed 
+by reason of the transactions contemplated by this Agreement.
+
+3. Installation/Product Support. Questions relating to installation 
+   and operation of the licensed software may be referred to 
+   Comm-Press, Inc. Product Support for non-defect related issues 
+   incurs a per incident fee of $175, which is processed by major 
+   credit card. Product Support may be reached at (972) 550-7694, 
+   extension 500. Product Support is provided on a call back basis. 
+
+4. Contract Services. Contract Services are available for customers 
+   requesting on site installation/implementation assistance at 
+   the then current contract rate plus travel expenses.  To request 
+   on site Contract Services, contact Product Support at the number 
+   listed above.
+
+5. Product Upgrades. Product Enhancements and Upgrades may be 
+   provided, at the discretion of Comm-Press, Inc. for an upgrade 
+   license fee to be determined by Comm-Press, Inc. Such Upgrades 
+   will be announced on the Comm-Press, Inc. Homepage, 
+   www.comm-press.com.
+
+6. Limited Warranty. The Software Program is provided on an "as is" 
+   basis and is not warranted. Comm-Press warrants the media on which 
+   the Software is recorded, to be free from defects in materials or 
+   workmanship in normal use and service for a period of ninety (90) 
+   days from delivery of the Software.  If during this ninety-day 
+   period, a defect in the media should appear, the media may be 
+   returned to Comm-Press for replacement without charge.  Comm-Press 
+   does not warrant or represent (a) that the functions contained in 
+   the Software will meet your requirements or will operate in the 
+   combination selected by you, (b) that the operation of the 
+   software will be error free, or (c) that the operation of the 
+   Software will not be interrupted by reason of defect or by reason 
+   of fault on the part of anyone.
+
+Except as expressly set forth in this Agreement, Comm-Press makes 
+no warranties, whether express or implied, or statutory regarding 
+or relating to the Software or the documentation, or any materials 
+or services furnished or provided to you under this Agreement. 
+Specifically, Comm-Press does not warrant that the Software will 
+be error free or will perform in an uninterrupted manner.  To the 
+maximum extent allowed by law, Comm-Press specifically disclaims 
+all implied warranties of merchantability and fitness for a 
+particular purpose (even if Comm-Press had been informed of such 
+purpose) with respect to the Software, documentation and support 
+and with respect to the use of any of the foregoing.
+
+7. Liability. Comm-Press shall have no liability for any claim of 
+   infringement based on (i) use of a superseded or altered release 
+   of the Software, except for which alteration(s) or modification(s)
+   has been made by Comm-Press or under Comm-Press' direction, if 
+   such infringement would have been avoided by the use of the 
+   current unaltered release of the Software that Comm-Press provides 
+   to you, or (ii) the combination, operation, or use of any Software 
+   furnished under this Agreement with programs or data not furnished 
+   by Comm-Press if such infringement would have been avoided by the 
+   use of the Software without such programs or data.  In the event 
+   that the Software is held or believed by Comm-Press to infringe, 
+   or your  use of the Software is enjoined, Comm-Press shall have 
+   the option, at its expense, to (a) modify the Software to be 
+   non-infringing, (b) obtain for you a license to continue using 
+   the Software, or (c) substitute the Software with other software 
+   reasonably suitable to you.  You agree that, regardless of the 
+   form of any claim, Comm-Press, Inc.'s liability for any damages 
+   or loss to you or any other party shall not exceed the license 
+   fee paid for the Software. IN NO EVENT SHALL COMM-PRESS, INC. 
+   BE RESPONSIBLE TO YOU OR ANY OTHER PERSON OR ENTITIY FOR ANY 
+   DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR LOST PROFITS WITH 
+   RESPECT TO ANY LIABILITY, FORESEEN OR UNFORESEEABLE, ALLEGED TO 
+   BE CAUSED BY THE SOFTWARE, EVEN IF COMM-PRESS HAS BEEN ADVISED 
+   OF THE POSSIBILITY OF SUCH DAMAGES.
+
+8. Maintenance Agreement. For an annual maintenance fee, Comm-Press 
+   will provide maintenance for its Software as required to bring 
+   the Software into conformity with the functional and operational 
+   specifications described in the Software documentation. Comm-Press 
+   may also periodically provide functional and/or operational 
+   enhancements to the Software. Comm-Press will provide enhancements 
+   and maintenance to the Software for a maintenance fee of 20% of 
+   the current license fee for the Software licensed by you. 
+   Comm-Press or you may cancel the maintenance agreement at any 
+   time after the first license year and you will not incur any 
+   maintenance fees after the time of cancellation; however, 
+   Comm-Press will not provide maintenance or enhancements for 
+   you that are not covered under a current maintenance agreement. 
+   Maintenance Support and Program updates will be provided to you 
+   only. Maintenance support and program distribution to third 
+   parties is your responsibility.
+
+9. ENCRYPTION EXPORT. If  Software licensed contains cryptographic 
+   features, you will need to obtain a digital certificate(s) from 
+   a certifying authority or certificate server in order to utilize 
+   those cryptographic features. All Comm-Press 4.4/EasyAccess2000 
+   users must obtain valid certificates from a KeyManager2000 
+   Certification Server. Comm-Press provides Certificates from its 
+   Public KeyManager Certification Server, or the end-user acquires 
+   KeyManager2000 and provides its own certification services. Check 
+   with the Reseller to obtain the location and contact for the 
+   KeyManager Server you are to use or call Comm-Press Sales at 
+   (972) 550-7694 for instructions.  
+
+10. EXPORT CONTROLS. None of the Software or underlying information 
+   or technology may be downloaded or otherwise exported or 
+   re-exported (i) into (or to a national or resident of) 
+   Cuba, Iraq, Libya, Sudan, North Korea, Iran, Syria or any other 
+   country to which the U.S. has embargoed goods; or (ii) to anyone 
+   on the U.S. Treasury Department's list of Specially Designated 
+   Nationals or the U.S. Commerce Department's Table of Denial orders. 
+   By downloading or using the Software, you are agreeing to the 
+   foregoing and you are representing and warranting that you are 
+   not located in, under the control of, or a national resident of 
+   any such country or on any such list. In addition, you are 
+   responsible for complying with any local laws in your jurisdiction 
+   which may impact your right to import, export, or use the Software.      
+
+If the Software is marked as "not-for-export"(on the box, media or 
+in the installation process), the following applies: EXCEPT FOR EXPORT
+TO CANADA FOR USE IN CANADA BY CANADIAN CITIZENS, THE SOFTWARE AND 
+ANY UNDERLYING TECHNOLOGY MAY NOT BE EXPORTED OUTSIDE THE UNITED 
+STATES OR TO ANY FOREIGN ENTITY OR 'FOREIGN PERSON' AS DEFINED BY 
+U.S. GOVERNMENT REGULATIONS, INCLUDING WITHOUT LIMITATION, ANYONE 
+WHO IS NOT A CITIZEN, NATIONAL OR LAWFUL PERMANENT RESIDENT OF THE 
+UNITED STATES. BY DOWNLOADING OR USING THE SOFTWARE, YOU ARE AGREEING 
+TO THE FOREGOING AND YOU ARE WARRANTING THAT YOU ARE NOT A 
+"FOREIGN PERSON" OR UNDER THE CONTROL OF A "FOREIGN PERSON." 
+(Exemptions may be approved by the US Department of State)
+
+11. Refunds. License Products may be returned with associated 
+    documentation within 30 days of receipt.  Should you elect to 
+    return product and documentation, you will be refunded license 
+    fees paid less a restocking fee equal to 5% of the license fees 
+    invoiced and paid.
+
+12. Governing Law. This License Agreement is governed by and 
+    interpreted in accordance with the laws of the State of Texas 
+    with venue in Dallas County, Texas. If any provision of this 
+    License Agreement contravenes the laws of the state or 
+    jurisdiction in which this License Agreement is performed, 
+    such provisions shall be deemed to be deleted and if any term 
+    of this License Agreement shall be declared by final adjudication 
+    to be illegal or contrary to public policy, it shall not affect 
+    the validity of any other term or provision of this License 
+    Agreement.
+
+13. No Action. No action regardless of form may be brought by 
+    either party more than one year after the cause of action has 
+    accrued, except that any action by Comm-Press, Inc. for amounts 
+    owed it by you hereunder may be brought within the period 
+    permitted by law.
+
+14. Whole Agreement. This License Agreement constitutes the entire 
+    agreement between Comm-Press, Inc. and you regarding the 
+    licenses Software. There are no understandings, agreements, or 
+    representations not specified herein with respect to this 
+    Agreement. The terms of this Agreement shall supersede any 
+    previous agreements between Comm-Press, Inc. and you. The 
+    modification or amendment of this Agreement may be made only in 
+    writing signed by both of the parties.
+
+	Comm-Press, Inc.         
+        2324 Gateway Drive             
+        Irving, Texas 75063               
+        972-550-7694
+

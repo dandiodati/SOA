@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<rule_set>
+   <name value="ASR validation rules"/>
+   <rule>
+      <name value="Validate admin section structure"/>
+      <if>
+         <condition>
+            <name value="PresentCondition"/>
+	    <argument value="asr.asr_adminsection.BAN"/>
+	 </condition>
+         <condition>
+            <name value="AbsentCondition"/>
+	    <argument value="asr.asr_adminsection.FOOBAR"/>
+         </condition>
+         <condition>
+            <name value="AllCondition"/>
+	    <argument value="asr.asr_adminsection.PON asr.asr_adminsection.CCNA asr.asr_adminsection.BAN"/>
+         </condition>
+         <condition>
+            <name value="AnyCondition"/>
+	    <argument value="asr.asr_adminsection.FOO asr.asr_adminsection.PON asr.asr_adminsection.DDD"/>
+         </condition>
+         <condition>
+            <name value="OnlyOneCondition"/>
+	    <argument value="asr.asr_adminsection.FOO asr.asr_adminsection.BAR asr.asr_adminsection.DDD"/>
+         </condition>
+         <condition>
+            <name value="NoneCondition"/>
+	    <argument value="asr.asr_adminsection.FOO asr.asr_adminsection.BAR"/>
+         </condition>
+      </if>
+      <then>
+      </then>
+      <else>
+      </else>
+   </rule>
+   <rule>
+      <name value="Validate admin section structure - inverted"/>
+      <invert value="true"/>
+      <if>
+         <condition>
+            <name value="PresentCondition"/>
+            <invert value="true"/>
+	    <argument value="asr.asr_adminsection.BAN"/>
+	 </condition>
+         <condition>
+            <name value="AbsentCondition"/>
+            <invert value="true"/>
+	    <argument value="asr.asr_adminsection.FOOBAR"/>
+         </condition>
+         <condition>
+            <name value="AllCondition"/>
+            <invert value="true"/>
+	    <argument value="asr.asr_adminsection.PON asr.asr_adminsection.CCNA asr.asr_adminsection.BAN"/>
+         </condition>
+         <condition>
+            <name value="AnyCondition"/>
+            <invert value="true"/>
+	    <argument value="asr.asr_adminsection.FOO asr.asr_adminsection.PON asr.asr_adminsection.DDD"/>
+         </condition>
+         <condition>
+            <name value="OnlyOneCondition"/>
+            <invert value="true"/>
+	    <argument value="asr.asr_adminsection.FOO asr.asr_adminsection.BAR asr.asr_adminsection.DDD"/>
+         </condition>
+         <condition>
+            <name value="NoneCondition"/>
+            <invert value="true"/>
+	    <argument value="asr.asr_adminsection.FOO asr.asr_adminsection.BAR"/>
+         </condition>
+      </if>
+   </rule>
+   <rule>
+      <name value="Validate admin section semantics"/>
+      <if>
+         <condition>
+            <name value="EqualsCondition"/>
+	    <argument value="asr.asr_adminsection.CCNA"/>
+	    <argument value="fubar"/>
+         </condition>
+         <condition>
+            <name value="NotEqualsCondition"/>
+	    <argument value="asr.asr_adminsection.CCNA"/>
+	    <argument value="hello"/>
+         </condition>
+         <condition>
+            <name value="InSetCondition"/>
+            <argument value="asr.asr_adminsection.CCNA"/>
+            <argument value="foo fubar bar"/>
+         </condition>
+         <condition>
+            <name value="NotInSetCondition"/>
+            <argument value="asr.asr_adminsection.CCNA"/>
+            <argument value="foo baz bar"/>
+         </condition>
+      </if>
+      <then>
+      </then>
+      <else>
+      </else>
+   </rule>
+   <rule>
+      <name value="Validate admin section semantics - inverted"/>
+      <invert value="true"/>
+      <if>
+         <condition>
+            <name value="EqualsCondition"/>
+            <invert value="true"/>
+	    <argument value="asr.asr_adminsection.CCNA"/>
+	    <argument value="fubar"/>
+         </condition>
+         <condition>
+            <name value="NotEqualsCondition"/>
+            <invert value="true"/>
+	    <argument value="asr.asr_adminsection.CCNA"/>
+	    <argument value="hello"/>
+         </condition>
+         <condition>
+            <name value="InSetCondition"/>
+            <invert value="true"/>
+            <argument value="asr.asr_adminsection.CCNA"/>
+            <argument value="foo fubar bar"/>
+         </condition>
+         <condition>
+            <name value="NotInSetCondition"/>
+            <invert value="true"/>
+            <argument value="asr.asr_adminsection.CCNA"/>
+            <argument value="foo baz bar"/>
+         </condition>
+      </if>
+   </rule>
+</rule_set>
+

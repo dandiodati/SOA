@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/comms/util/ftp/ssl/jni/SOLARIS/libs
+END
+libssockapi.so
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/comms/util/ftp/ssl/jni/SOLARIS/libs/libssockapi.so
+END
+libFtpSslLayerInterconnectNative.so
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/comms/util/ftp/ssl/jni/SOLARIS/libs/libFtpSslLayerInterconnectNative.so
+END
+libcpcert.so
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/comms/util/ftp/ssl/jni/SOLARIS/libs/libcpcert.so
+END
+libtdntools.so
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/comms/util/ftp/ssl/jni/SOLARIS/libs/libtdntools.so
+END
+libsqlapi.so
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/comms/util/ftp/ssl/jni/SOLARIS/libs/libsqlapi.so
+END
+libxfersolar26sc5.so
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/comms/util/ftp/ssl/jni/SOLARIS/libs/libxfersolar26sc5.so
+END
+libmdndb.so
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/comms/util/ftp/ssl/jni/SOLARIS/libs/libmdndb.so
+END
+librouter.so
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/comms/util/ftp/ssl/jni/SOLARIS/libs/librouter.so
+END
+libcpsql.so
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/comms/util/ftp/ssl/jni/SOLARIS/libs/libcpsql.so
+END
+libbtdao.so
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/comms/util/ftp/ssl/jni/SOLARIS/libs/libbtdao.so
+END
+libslogmsg.so
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/comms/util/ftp/ssl/jni/SOLARIS/libs/libslogmsg.so
+END

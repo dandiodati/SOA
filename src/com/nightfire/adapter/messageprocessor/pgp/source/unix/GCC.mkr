@@ -1,0 +1,36 @@
+#
+# Copyright(c) 2000 NightFire Software, Inc.
+# All rights reserved.
+#
+# gcc/g++ rules for NightFire.mk
+#******************************************************************************
+
+#
+# Compiler commands, etc
+#
+
+CC = g++
+MAKE_DEPEND = $(CC) -M $(CFLAGS)
+ARCHIVE = ar -r
+SHARCHIVE = $(CC) -shared $(LDFLAGS) -o
+LD = g++
+
+# add CWD to include path
+CFLAGS += -I.
+
+#
+# Thread safety flags
+#
+
+ifneq (,$(strip $(THREADSAFE)))
+CFLAGS += -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS
+LDFLAGS += -lpthread
+endif
+
+#
+# Flags needed for gcc to work right on Sun
+#
+
+ifeq ($(OSNAME),SunOS)
+CFLAGS += -fPIC
+endif

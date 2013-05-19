@@ -1,0 +1,19 @@
+module com {
+  	module nightfire {
+     	module idl {
+
+        exception CacheClearingException
+		    {
+          string errorMessage;
+  		  };
+	        interface ServerAdmin {
+				// Method to shutdown the server.
+				void shutdown ( );
+
+				// Method to clear the cached data in the server.
+				void flushCache ( )
+          raises ( CacheClearingException );
+			};
+		};
+	};
+};		

@@ -1,0 +1,155 @@
+package com.nightfire.comms.ia3.asn.issue3; // machine generated code. DO NOT EDIT
+
+import cryptix.asn1.lang.*;
+
+public class SecureMessage extends Choice {
+
+   // Constructor(s)
+   // -------------------------------------------------------------------------
+
+   /**
+    * Constructs a new instance of this type with a blank Name.
+    */
+   public SecureMessage() {
+      super("", null);
+   }
+
+   /**
+    * Constructs a new instance of this type with a designated Name.
+    *
+    * @param name the designated Name for this new instance.
+    */
+   public SecureMessage(String name) {
+      super(name, null);
+   }
+
+   /**
+    * Constructs a new instance of this type with a designated Name and Tag.
+    *
+    * @param name the designated Name for this new instance.
+    * @param tag the designated tag for this new instance.
+    */
+   public SecureMessage(String name, Tag tag) {
+      super(name, tag);
+   }
+
+   /**
+    * Constructs a new instance of this type with a trivial Name and an
+    * initial value.
+    *
+    * @param value the initial value of this instance.
+    */
+   public SecureMessage(Choice value) {
+      this("", value);
+   }
+
+   /**
+    * Constructs a new instance of this type with a designated Name and an
+    * initial value.
+    *
+    * @param name the designated Name for this new instance.
+    * @param value the initial value of this instance.
+    */
+   public SecureMessage(String name, Choice value) {
+      this(name, null, value);
+   }
+
+   /**
+    * Constructs a new instance of this type given its Name, Tag and initial
+    * value.
+    *
+    * @param name the designated Name for this new instance.
+    * @param tag the specific tag for this instance.
+    * @param value the initial value for this instance.
+    */
+   public SecureMessage(String name, Tag tag, Choice value) {
+      super(name, tag, value == null ? null : value.value());
+   }
+
+   // Constants and variables
+   // -------------------------------------------------------------------------
+
+
+   // Over-loaded implementation of methods defined in superclass
+   // -------------------------------------------------------------------------
+
+   protected void initInternal() {
+      super.initInternal();
+
+      IType hashedMessage = new HashedMessage("hashedMessage", new Tag(Tag.CONTEXT, 0, true));
+      components.add(hashedMessage);
+      IType signedMessage = new SignedMessage("signedMessage", new Tag(Tag.CONTEXT, 1, true));
+      components.add(signedMessage);
+      IType messageReceipt = new IaReceiptMessage("messageReceipt", new Tag(Tag.CONTEXT, 2, true));
+      components.add(messageReceipt);
+   }
+
+   // Accessor methods
+   // -------------------------------------------------------------------------
+
+   public HashedMessage getHashedMessage() {
+      return (HashedMessage) components.get(0);
+   }
+
+   public void setHashedMessage(HashedMessage obj) {
+      HashedMessage it = getHashedMessage();
+      it.value(obj.value());
+      components.set(0, it);
+   }
+
+   public SignedMessage getSignedMessage() {
+      return (SignedMessage) components.get(1);
+   }
+
+   public void setSignedMessage(SignedMessage obj) {
+      SignedMessage it = getSignedMessage();
+      it.value(obj.value());
+      components.set(1, it);
+   }
+
+   public IaReceiptMessage getMessageReceipt() {
+      return (IaReceiptMessage) components.get(2);
+   }
+
+   public void setMessageReceipt(IaReceiptMessage obj) {
+      IaReceiptMessage it = getMessageReceipt();
+      it.value(obj.value());
+      components.set(2, it);
+   }
+
+   // CHOICE-specific convenience methods
+   // -------------------------------------------------------------------------
+
+   /**
+    * Returns true iff this CHOICE instance has been decoded, and its (only)
+    * concrete alternative is the designated one. False otherwise.
+    *
+    * @return true iff this CHOICE instance has been decoded, and its (only)
+    * concrete alternative is the designated one. False otherwise.
+    */
+   public boolean isHashedMessage() {
+      return !getHashedMessage().isBlank();
+   }
+   /**
+    * Returns true iff this CHOICE instance has been decoded, and its (only)
+    * concrete alternative is the designated one. False otherwise.
+    *
+    * @return true iff this CHOICE instance has been decoded, and its (only)
+    * concrete alternative is the designated one. False otherwise.
+    */
+   public boolean isSignedMessage() {
+      return !getSignedMessage().isBlank();
+   }
+   /**
+    * Returns true iff this CHOICE instance has been decoded, and its (only)
+    * concrete alternative is the designated one. False otherwise.
+    *
+    * @return true iff this CHOICE instance has been decoded, and its (only)
+    * concrete alternative is the designated one. False otherwise.
+    */
+   public boolean isMessageReceipt() {
+      return !getMessageReceipt().isBlank();
+   }
+}
+
+// Generated by the cryptix ASN.1 kit on Tue Aug 24 11:57:40 PDT 2004

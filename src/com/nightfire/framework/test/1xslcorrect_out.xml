@@ -1,0 +1,71 @@
+
+Start the EDI
+	
+  
+Start the LSR SS header
+	
+	NODE SS
+	NODE OVC
+	NODE TestPON6
+	NODE 0
+	NODE 
+	NODE PT02
+	NODE 
+	NODE 
+	NODE 
+	NODE Y
+	NODE AB
+	NODE A
+	NODE Y
+	NODE D
+	NODE 7871
+	NODE Y
+	NODE SNVACA01W21
+	NODE 
+	NODE 1B
+	NODE AD--
+	NODE 02QC5.OOS
+	NODE 02IS5
+	NODE 2725640322
+	NODE OVC
+	NODE Y
+	NODE Y
+	NODE Y
+	NODE Y
+	NODE Test EDI/XML Generation
+
+  
+Start the EU form 
+	
+	NODE Covad Communications Company
+	NODE 2330
+	NODE 
+	NODE CENTRAL
+	NODE EXPRESSWAY
+	NODE 
+	NODE 
+	NODE First
+	NODE 5
+	NODE Santa Clara
+	NODE CA
+	NODE 95050
+	NODE Anil Ananthaswamy
+	NODE 5106493544
+	NODE 
+
+  
+Start the loops
+	
+      
+Start loop 1
+	Loop Data element 
+	Loop Data element 70/LXQD/163010/084/PT
+	Loop Data element OVC50/26NL/0001/SNVACA01/SNVACA01W51
+
+      
+Start loop 2
+	Loop Data element 
+	Loop Data element 99/LXQD/163010/084/PT
+	Loop Data element OVC99/26NL/0001/SNVACA01/SNVACA01W51
+  
+

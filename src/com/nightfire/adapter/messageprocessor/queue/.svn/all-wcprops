@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/adapter/messageprocessor/queue
+END
+XMLQueueConsumer.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/adapter/messageprocessor/queue/XMLQueueConsumer.java
+END
+XMLQueueProducer.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/adapter/messageprocessor/queue/XMLQueueProducer.java
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/COE_Sonar/!svn/ver/3/trunk/SOA/src/com/nightfire/adapter/messageprocessor/queue/Makefile
+END

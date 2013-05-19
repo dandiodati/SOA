@@ -1,0 +1,50 @@
+MyFtpServerDomainName;			Domain name or IP address of your FTP server
+myUserId;						userId
+myPassword;						passwd
+MyEdiName;						edi name
+Y;								passive
+Y;								SSL
+\easyacc\easyacc.cmd;			send filespec
+\easyacc\incoming\recv.txt;		receive file-spec once we have received it
+aServerFileName;				Server filename;
+myClass;						userClass
+\easyacc\runtime;				runtime directory
+\easyacc\runtime;				runtime directory for IGN certificates
+\easyacc\temp;					temp directory
+\easyacc\temp\testlist.txt;		list file-spec
+w;								mode (w => overwrite, a => append)
+N;								compression (Y => compress, N => no compression)
+N;								filter (applies only if compression is Y)
+Y;								ascii (applies only if compression is Y)
+N;								edi (applies only if compression is Y)
+N;								secure (applies only if compression is Y)
+N;								crlf (applies only if compression is Y)
+N;								append (Y => append files on receive)_
+Y;								autoext (Y => auto-extent files on receive)
+21;								control port for ftp session
+20;								data port for ftp session (NO LONGER USED)
+8;								network style (see below)
+
+
+
+
+Network Styles currently supported:
+
+GENERIC_STYLE				// 0
+GENERIC_DOS_STYLE			// 1
+GENERIC_SSL_STYLE			// 2
+IGN_STYLE					// 3
+IFX_STYLE					// 4
+FEDEX_STYLE					// 5
+EDS_STYLE					// 6
+WALMART_STYLE				// 7
+EAFTP_STYLE					// 8
+CPFTP_STYLE					// 9
+GEIS_EXPRESS_STYLE			// 10
+GEIS_SWITCH_STYLE			// 11
+CONNECTMAIL_STYLE			// 12
+STERLING_COMMERCE_STYLE		// 13
+MCI_EDINET_STYLE			// 14
+EDI_INT_STYLE				// 15
+LOCAL_ARCHIVE_STYLE			// 16
+

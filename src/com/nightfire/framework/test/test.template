@@ -1,0 +1,18 @@
+Customer {{asr.asr_contactsection.INIT}}
+
+   ({{asr.asr_contactsection.INIT_TEL_NO.AREA}}) {{asr.asr_contactsection.INIT_TEL_NO.EXCH}}-{{asr.asr_contactsection.INIT_TEL_NO.NUMBER}}
+
+Congratulations, you've won the following items:
+
+   {{asr.asr_adminsection.CCNA}},
+   {{?asr.asr_adminsection.ICSC}}
+   {{!asr.asr_adminsection.PON}}
+
+{{! You shouldn't see this line,
+or this one in the output}}
+
+{{?asr.asr_billsection.creditCardNumber}}
+
+Thanks,
+
+   the unit-test team!
