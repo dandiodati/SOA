@@ -1,0 +1,18 @@
+This file lists the test cases implemented in this package:
+
+1. Test that DBTransaction works in sunny day scenario:
+   - Create DBTransaction
+   - Create two TransactionParticipant objects
+   - Make first one invoke SQL insert queryn
+   - Make second one invoke SQL insert query
+   - Commit. Verify that the updates happened in DB.
+
+2. Test that DBTransaction works in sunny day scenario:
+   - Create DBTransaction
+   - Create two TransactionParticipant objects
+   - Make first one invoke SQL insert queryn
+   - Make second one invoke SQL insert query
+   - Rollback. Verify that the tables aren't updated.  Verify that
+     undo() is called on each participant.
+
+

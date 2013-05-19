@@ -1,0 +1,115 @@
+<?xml version='1.0' standalone='no'?>
+
+<ORDER REQUEST_TYPE='New'>
+  <LSR>
+    <ORDER_TYPE value='SS'/>
+    <CCNA value='OVC'/>
+    <PON value='TestPON6'/>
+    <VER value='0'/>
+    <LSR_NO value=''/>
+    <SC value='PT02'/>
+    <DTSENT type="datetime">
+      <DATE value='19990107'/>
+      <TIME value='1737'/>
+    </DTSENT>
+    <DDD type="datetime">
+      <DATE value='19990107'/>
+    </DDD>
+    <APPTIME>
+      <TIME value='0800A-0500P'/>
+    </APPTIME>
+    <CHC value='Y'>
+      <TIME value='0530PM'/>
+      <TIMECODE value='TM'/>
+    </CHC>
+    <REQTYP value='AB'/>
+    <ACT value='A'/>
+    <EXP value='Y'/>
+    <RTR value='D'/>
+    <CC value='7871'/>
+    <ALBR value='Y'/>
+    <ACTL value='SNVACA01W21'/>
+    <APOT value=''>
+        <AI value='N'/>
+    </APOT>
+    <TOS value='1B'/>
+    <NC value='AD--'/>
+    <NCI value='02QC5.OOS'/>
+    <SECNCI value='02IS5'/>
+    <BAN1 value='2725640322'/>
+    <ACNA value='OVC'/>
+    <INITIATOR value='Y'>
+      <CONTACTINFO>
+        <NAME value='Ralph Saavedra'/>
+        <TELNO value='4154904350'/>
+        <EMAIL value='ralph@covad.com'/>
+        <FAXNO value='4154904351'/>
+        <STREET value='3560 NORTH BASSETT STREET'/>
+        <CITY value='Santa Clara'/>
+        <STATE value='CA'/>
+        <ZIP value='94710'/>
+      </CONTACTINFO>
+    </INITIATOR>
+    <IMPCON value='Y'>
+      <CONTACTINFO>
+        <NAME value='Vinu Sundaresan'/>
+        <TELNO value='4154904350'/>
+        <PAGER value='4154904350'/>
+      </CONTACTINFO>
+    </IMPCON>
+    <ALT_IMPCON value='Y'>
+      <CONTACTINFO>
+        <NAME value='Ellie Ruiz'/>
+        <TELNO value='4154904350'/>
+        <PAGER value='4154904350'/>
+      </CONTACTINFO>
+    </ALT_IMPCON>
+    <DSGCON value='Y'>
+      <CONTACTINFO>
+        <NAME value='Yan Or'/>
+        <TELNO value='4154904350'/>
+        <EMAIL value='uanor@covad.com'/>
+        <FAXNO value='4154904351'/>
+        <STREET value='3560 NORTH BASSETT STREET'/>
+        <CITY value='Santa Clara'/>
+        <STATE value='CA'/>
+        <ZIP value='94710'/>
+      </CONTACTINFO>
+    </DSGCON>
+    <REMARKS value='Test EDI/XML Generation'/>
+  </LSR>
+
+  <EU>
+    <NAME value='Covad Communications Company'/>
+    <SANO value='2330'/>
+    <SASF value=''/>
+    <SASN value='CENTRAL'/>
+    <SATH value='EXPRESSWAY'/>
+    <SASS value=''/>
+    <SADLO value=''/>
+    <FLOOR value='First'/>
+    <ROOM value='5'/>
+    <CITY value='Santa Clara'/>
+    <STATE value='CA'/>
+    <ZIP value='95050'/>
+    <LCON value='Anil Ananthaswamy'/>
+    <TELNO value='5106493544'/>
+    <ACC value=''/>
+  </EU>
+
+  <LOOPS lqty='2'>
+      <LOOP ref='1'>
+        <CKR value=''/>
+        <ECCKT value='70/LXQD/163010/084/PT'/>
+        <CFA value='OVC50/26NL/0001/SNVACA01/SNVACA01W51'/>
+      </LOOP>
+
+      <LOOP ref='2'>
+        <CKR value=''/>
+        <ECCKT value='99/LXQD/163010/084/PT'/>
+        <CFA value='OVC99/26NL/0001/SNVACA01/SNVACA01W51'/>
+      </LOOP>
+  </LOOPS>
+
+</ORDER>
+

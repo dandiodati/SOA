@@ -1,0 +1,24 @@
+# Connector Description to be used with Connector Generator//Connector Wizard
+
+# name of the connector class
+classname NFSource
+
+# name to be displayed in the gui
+displayname "NFSource"
+
+# kind of connector (source, target, or sourcetarget)
+kind source
+
+# java package this connector belongs to
+package com.nightfire.comms.connectors
+
+# parameter descriptions format:
+# param type name "short description" "long description"
+param String serverName "Server Name" "Name of the server as registered in the naming service" 
+param String serverAddress "Server address" "IP address of the Vitria Server host" 
+param String osAgentAddr "osAgent address" "IP address of the machine running osAgent" 
+param String osAgentPort "osAgent port" "Port used by the osAgent" 
+param String nfLogLevel "NF Debugging level" "Level of debugging for the server" "all"
+param String nfLogFile "NF Log File" "The name of the logging file" "console"
+param String srvcNameRoot "NamingContext root" "The name of the root of the NamingContext" "Nightfire"
+

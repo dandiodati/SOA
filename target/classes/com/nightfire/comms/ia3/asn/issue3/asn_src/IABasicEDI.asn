@@ -1,0 +1,37 @@
+-- Copyright(c) 2004 Neustar Software, Inc.
+-- All rights reserved
+
+InteractiveAgent
+
+DEFINITIONS IMPLICIT TAGS ::= 
+BEGIN
+
+interactiveAgent OBJECT IDENTIFIER ::= {
+  iso(1) org(3) dod(6) internet(1) private(4) enterprises(1) mciwcom(3576) 5 
+}
+
+securityModule  OBJECT IDENTIFIER ::= {
+    iso(1) org(3) dod(6) internet(1) private(4) enterprises(1)
+    mciwcom(3576) 6
+}
+
+--EXPORTS everything
+IaMessage ::= CHOICE 
+{
+	basicMessage BasicMessage,		--Basic Message
+	iaStatusMessage IaStatusMessage, 	--IA Status/Control Message
+	enhancedMessage EnhancedMessage 	--Security Module Enhanced
+}
+
+
+BasicMessage ::= CHOICE 
+{
+	basicMessage2 IA5String, --EDI Message
+	basicMessage3 [0] EXPLICIT IA5String, --Plain Text Message
+	basicMessage4 [1] EXPLICIT IA5String --XML Message
+}
+	
+IaStatusMessage ::= BIT STRING ( SIZE (32) )
+EnhancedMessage ::= OCTET STRING -- Security Module Enhanced Message
+
+END

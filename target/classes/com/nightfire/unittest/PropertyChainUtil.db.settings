@@ -1,0 +1,35 @@
+#KEY,PROPERTYTYPE,PROPERTYNAME,PROPERTYVALUE,CONFIGURABLE,DESCRIPTION
+#
+circle,first,dan,man,1,dan
+circle,first,joe,blow,1,joe
+circle,first,MORE_PROPERTIES_TYPE,user_info,1,
+circle,other_users,bill,clinton,1,bill
+circle,other_users,joy ,duh,1,
+circle,other_users,MORE_PROPERTIES_TYPE,first,1,
+circle,other_users,tommy,gun,1,
+circle,user_info,joe,smith,1,
+circle,user_info,john,who,1,
+circle,user_info,MORE_PROPERTIES_TYPE,other_users,1,
+GM,OrdersTest,test2,test2,1,
+GMOrders,Test,MORE_PROPERTIES_KEY,GM,1,
+GMOrders,Test,MORE_PROPERTIES_TYPE,OrdersTest,1,
+GMOrders,Test,test,test,1,tests for joined key and types that are the same
+GTE,ORDERS,first,1,1,
+GTE,ORDERS,second,2,1,
+GTE,ORDERS,three,3,1,
+GTE,preorders,prefirst,p1,1,
+GTE,preorders,presecond,p2,1,
+GTE,user_info,dan,who,1,
+GTE,user_info,joe,blow,1,
+GTE,user_info,tom,my,1,
+PACBELL,orders,first,1st,1,
+PACBELL,orders,MORE_PROPERTIES_KEY,GTE,1,
+PACBELL,orders,MORE_PROPERTIES_TYPE,user_info,1,
+PACBELL,orders,second,2nd,1,
+PACBELL,orders,third,3rd,1,
+PACBELL,order_info,MORE_PROPERTIES_TYPE,orders,1,includes orders which includes gte user_info
+PACBELL,user_info,dan,Dan the man,1,
+PACBELL,user_info,Joe,Black,1,
+PACBELL,user_info,Joy,SA,1,
+PACBELL,user_info,MORE_PROPERTIES_KEY,GTE,1,double chain
+PACBELL,user_info,Sad ,Mad,1,

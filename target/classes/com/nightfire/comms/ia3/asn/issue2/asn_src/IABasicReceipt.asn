@@ -1,0 +1,50 @@
+-- Copyright(c) 2000 NightFire Software, Inc.
+-- All rights reserved
+
+Issue2-IABasicReceipt
+
+DEFINITIONS EXPLICIT TAGS ::=
+BEGIN
+
+eciaAscX12Edi OBJECT IDENTIFIER ::= {
+    iso(1) org(3) dod(6) internet(1) private(4) enterprises(1)
+    mciwcom(3576) 7
+}
+
+IABasicReceipt ::= SEQUENCE {
+    iaReceiptMessage OBJECT IDENTIFIER,
+    receiptContent [0] ReceiptContent
+}
+
+ReceiptContent ::= [0] EXPLICIT SEQUENCE {
+    isaSegment OCTET STRING,
+    dateTimeStamp PrintableString, -- ( SIZE(15) ),
+    enhancements Enhancements OPTIONAL
+}
+
+-- dateTimeStamp should be formatted CCYYMMDDhhmmssz
+-- Where z is a time zone indicator and a blank z indicates local observed time
+
+Enhancements ::= CHOICE {
+    withDigest[1] WithDigest,
+    withDigSig[2] WithDigSig
+}
+
+WithDigest ::= [1] EXPLICIT SEQUENCE {
+    receiptDigestAlgorithm OBJECT IDENTIFIER,
+    receiptMessageDigest OCTET STRING
+}
+
+WithDigSig ::= [2] EXPLICIT SEQUENCE {
+    receiptSignatureAlgorithm OBJECT IDENTIFIER,
+    receiptDigitalSignature OCTET STRING
+}
+
+-- The first OID gets an extra 0 prepended for some reason
+bogusOID OBJECT IDENTIFIER ::= { eciaAscX12Edi 99 }
+
+plainEDImessage OBJECT IDENTIFIER ::= { eciaAscX12Edi 1 }
+iaReceiptMessage OBJECT IDENTIFIER ::= { eciaAscX12Edi 65 }
+iaStatusMessage OBJECT IDENTIFIER ::= { eciaAscX12Edi 97 }
+
+END

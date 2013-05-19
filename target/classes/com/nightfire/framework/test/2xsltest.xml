@@ -1,0 +1,67 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE FORM SYSTEM "meta.dtd" [
+<!--
+    Description : ASR form meta description
+    Author : Richard Southwick
+-->
+]>
+<FORM name="ASR20">
+    <SECTION name="Administrative Section">
+	<FIELD usage="Required">
+		<NAME>CCNA</NAME>
+		<DESCR>Customer Carrier Name Abbreviation</DESCR>
+		<TYPE>Alpha</TYPE>
+		<USAGE>Required</USAGE>
+		<LENGTH>3</LENGTH>
+		<FIELDNUM>1</FIELDNUM>
+	</FIELD>
+
+	<FIELD>
+		<NAME>PON</NAME>
+		<DESCR>Purcahse Order Number</DESCR>
+		<TYPE>Alphanum</TYPE>
+		<USAGE>Required</USAGE>
+		<LENGTH>16</LENGTH>
+		<FIELDNUM>2</FIELDNUM>
+	</FIELD>
+
+	<FIELD>
+		<NAME>VER</NAME>
+		<DESCR>Version Number</DESCR>
+		<TYPE>Alphanum</TYPE>
+		<USAGE>Optional</USAGE>
+		<LENGTH>2</LENGTH>
+		<FIELDNUM>3</FIELDNUM>
+	</FIELD>
+
+	<FIELD>
+		<NAME>WST</NAME>
+		<DESCR>Wireless Service Type</DESCR>
+		<TYPE>Enumerated</TYPE>
+		<OPTIONS>
+			<OPTION>A</OPTION>
+			<OPTION>B</OPTION>
+			<OPTION>R</OPTION>
+			<OPTION>H</OPTION>
+			<OPTION>1</OPTION>
+			<OPTION>2</OPTION>
+			<OPTION>3</OPTION>
+			<OPTION>4</OPTION>
+		</OPTIONS>
+		<USAGE>Conditional</USAGE>
+		<LENGTH>1</LENGTH>
+		<FIELDNUM>20a</FIELDNUM>
+	</FIELD>
+    </SECTION>
+    <SECTION name="Bill Section">
+
+	<FIELD>
+		<NAME>BILLNM</NAME>
+		<DESCR>Billing Name</DESCR>
+		<TYPE>Text</TYPE>
+		<USAGE>Conditional</USAGE>
+		<LENGTH>18</LENGTH>
+		<FIELDNUM>60</FIELDNUM>
+	</FIELD>
+    </SECTION>
+</FORM>

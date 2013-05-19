@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE specialaccess SYSTEM "file:./msg_api_test.dtd">
+
+<specialaccess>
+
+<asr>
+    <asr_adminsection>
+		<CCNA value="fubar"/>
+		<PON value="asf123454"/>
+		<ICSC value="PT02"/>
+		<DTSENT type="datetime">
+			<DATE value="12-12-1998"/>
+			<TIME value="11:15 PM"/>
+		</DTSENT>
+		<DDD value="03-22-1996"/>
+		<REQTYP type="complex" value="SA">
+			<CHAR value="S"/>
+			<CHAR value="A"/>
+		</REQTYP>
+		<BAN value="1234978"/>
+		<BIC_TEL type="phoneno">
+			<AREA value="617"/>
+			<EXCH value="555"/>
+			<NUMBER value="1234"/>
+		</BIC_TEL>
+    </asr_adminsection>
+    <asr_billsection>
+		<BILLNM value="Fred Bloggs"/>
+    </asr_billsection>
+    <asr_contactsection>
+		<INIT value="Wade Boggs"/>
+		<INIT_TEL_NO type="phoneno">
+			<AREA value="617"/>
+			<EXCH value="555"/>
+			<NUMBER value="1234"/>
+		</INIT_TEL_NO>
+		<INIT_STREET value="123 Heaven's Gate"/>
+		<INIT_STATE value="CA"/>
+		<INIT_ZIP_CODE value="97867"/>
+		<DTREC type="datetime">
+			<DATE value="12-12-1998"/>
+			<TIME value="11:15 PM"/>
+		</DTREC>
+    </asr_contactsection>
+</asr>
+
+<sa>
+	<adminsection>
+		<CCNA value="fubar"/>
+		<PON value="asf123454"/>
+		<ASR_NO value="1234567"/>
+	</adminsection>
+	<sa_circuitdetail>
+		<SECTLV type="section">
+			<SECTION value="-15.8T"/>
+			<SECTION value="+07.OR"/>
+		</SECTLV>
+	</sa_circuitdetail>
+	<sa_location>
+	</sa_location>
+	<remarks>
+		<REMARKS value="These are remarks"/>
+	</remarks>
+
+</sa>
+<aci>
+	<adminsection>
+		<CCNA value="fubar"/>
+		<PON value="asf123454"/>
+		<ASR_NO value="1234567"/>
+	</adminsection>
+	<aci_circuitdetail>
+		<CKR value="fubar"/>
+	</aci_circuitdetail>
+</aci>
+
+</specialaccess>

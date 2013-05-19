@@ -1,0 +1,27 @@
+#
+# Copyright (c) 2001 NightFire Software, Inc.
+# All rights reserved.
+#
+# GNU Makefile for libprocinfo.so and procinfo.dll
+##############################################################################
+
+# location of jdk
+ifeq (,$(strip $(JAVA_HOME)))
+JAVA_HOME = /usr/local/jdk1.2.1
+endif
+
+# include paths
+CFLAGS += -I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/solaris
+CFLAGS += -I$(JAVA_HOME)/include/win32
+
+# require thread safety
+THREADSAFE = true
+
+# source files
+SOURCES = ProcInfo.C 
+
+STLIB = bogus_procinfo
+SHLIB = procinfo
+
+# include the mother makefile
+include NightFire.mk

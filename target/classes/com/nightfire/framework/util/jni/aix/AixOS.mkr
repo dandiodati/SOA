@@ -1,0 +1,78 @@
+#
+# Copyright(c) 2000 NightFire Software, Inc.
+# All rights reserved.
+#
+# AIXOS/IBM rules for NightFire.mk
+#******************************************************************************
+
+# various extensions
+OBJ_EXT := .o
+OBJ_EXT := $(strip $(OBJ_EXT))
+
+DEP_EXT := .d
+DEP_EXT := $(strip $(DEP_EXT))
+
+STLIB_PREF := lib
+STLIB_PREF := $(strip $(STLIB_PREF))
+
+STLIB_SUFF := .a
+STLIB_SUFF := $(strip $(STLIB_SUFF))
+
+SHLIB_PREF := lib
+SHLIB_PREF := $(strip $(SHLIB_PREF))
+
+SHLIB_SUFF := .so
+SHLIB_SUFF := $(strip $(SHLIB_SUFF))
+
+#
+# Definitions that are not compiler dependent
+#
+
+RMDIR = rm -r
+PERL = perl
+
+# If any part of the target directory does not exist, creates it
+define MAKE_DIR
+	$(BEQUIET)if [ ! -d $(@D) ] ; then echo Creating directory $(@D) ...; \
+		mkdir -p $(@D) ; fi
+endef
+
+# dependency generation
+define GENERATE_DEPEND
+	@echo Generating dependencies for $(notdir $<)...
+	$(MAKE_DIR)
+	$(BEQUIET) $(SHELL) -ec '$(MAKE_DEPEND) $< \
+		| sed "s,\($*\\.o\)[ :]*,$(OBJ_LOC)/\1 $@ : ,g" > $@'
+endef
+
+# source compilation to object files
+define GENERATE_OBJECT
+	@echo Compiling $(<F)
+	$(MAKE_DIR)
+	$(BEQUIET)$(CC) $(CFLAGS) -c -o $@ $<
+endef
+
+# static library generation
+define GENERATE_ARCHIVE
+	@echo Creating library $(@F)
+	$(MAKE_DIR)
+	$(BEQUIET)$(ARCHIVE) $@ $^
+endef
+
+# shared library generation
+define GENERATE_SHARCHIVE
+	@echo Creating shared library $(@F)
+	$(MAKE_DIR)
+	$(BEQUIET)$(SHARCHIVE) $@ $^ $(LIBRARIES)
+endef
+
+# executable generation
+define GENERATE_EXEC
+	@echo Creating executable $(@F)
+	$(MAKE_DIR)
+	@echo $(BEQUIET)
+	@echo $(LD) 
+	@echo $(LDFLAGS)
+	@echo $(LIBRARIES)
+	$(BEQUIET)$(LD) $(LDFLAGS) -o $@ $^ $(LIBRARIES)
+endef

@@ -1,0 +1,85 @@
+module com {
+  module nightfire {
+     module idl {
+
+       enum CorbaServerExceptionType
+       {
+	 UnknownError,
+	 DatabaseError,
+	 CommunicationsError,
+	 AccessDeniedError
+       };
+
+       exception CorbaServerException
+		  {
+		     CorbaServerExceptionType errorType;
+		        string errorMessage;
+			
+		   };
+
+	 enum InvalidDataExceptionType
+	 {
+	     UnknownDataError,
+	     MalformedDataError,
+	     MissingDataError,
+	     InvalidDataError
+	 };
+		  
+	 exception InvalidDataException
+	 {
+	     InvalidDataExceptionType errorType;
+         string header;
+	     string errorMessage;
+	 };	     
+       
+	        interface RequestHandler  
+		{
+		    
+			
+		// Handles Null responses in Process Synch method
+		   exception NullResultException
+		   {
+		        string errorMessage;
+		   };
+		 
+    		// A complete description of one interface   
+		// supported by an SPI.
+		struct UsageDescription
+	    	{
+        	string   serviceProvider;
+	        string   interfaceVersion;
+        	string   OperationType;
+	        boolean  asynchronous;
+	    };
+
+	    typedef sequence<UsageDescription> UsageDescriptions;
+
+	
+	     // Method used to get all interfaces supported 
+	     // by a given SPI.
+	     UsageDescriptions getUsageDescriptions ( );
+
+
+	    // Test to see if a particular usage is supported.
+		    boolean supportsUsage ( in UsageDescription usage );
+
+
+	    // Method providing asynchronous processing.
+	    void processAsync ( in string header, in string request )
+             raises( InvalidDataException, CorbaServerException );
+        
+	    // Method providing synchronous processing.
+	    void processSync ( in string header, in string request, out string response )
+             raises( InvalidDataException, CorbaServerException, NullResultException );
+
+	    // Method providing synchronous processing, with headers in and out.
+	    void processSynchronous( 
+	       in string requestHeader,
+	       in string request,
+	       out string responseHeader,
+	       out string response) raises ( 
+		  InvalidDataException, CorbaServerException, NullResultException );
+	   }; 
+	};
+     };
+ };		

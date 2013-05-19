@@ -1,0 +1,15 @@
+<?xml version="1.0"?><html><body bgcolor="#DDDDDD"><CENTER><H2>ASR20</H2></CENTER><FORM METHOD="post" ACTION="/Scripts/ttcgi.exe"><HR/>
+    <TABLE><TR><TD><FONT FACE="sans-serif, Arial, Helvetica" SIZE="4">Administrative Section</FONT></TD>
+	<TD><FONT FACE="sans-serif, Arial, Helvetica" SIZE="2">CCNA<BR/><INPUT type="TEXT" MAXLENGTH="3" SIZE="3" NAME="CCNA"/></FONT></TD>
+
+	<TD><FONT FACE="sans-serif, Arial, Helvetica" SIZE="2">PON<BR/><INPUT type="TEXT" MAXLENGTH="16" SIZE="16" NAME="PON"/></FONT></TD>
+
+	<TD><FONT FACE="sans-serif, Arial, Helvetica" SIZE="2">VER<BR/><INPUT type="TEXT" MAXLENGTH="2" SIZE="2" NAME="VER"/></FONT></TD>
+
+	<TD><FONT FACE="sans-serif, Arial, Helvetica" SIZE="2">WST<BR/><SELECT NAME="WST"><OPTION>A</OPTION><OPTION>B</OPTION><OPTION>R</OPTION><OPTION>H</OPTION><OPTION>1</OPTION><OPTION>2</OPTION><OPTION>3</OPTION><OPTION>4</OPTION></SELECT></FONT></TD>
+    </TR></TABLE><HR/>
+    <TABLE><TR><TD><FONT FACE="sans-serif, Arial, Helvetica" SIZE="4">Bill Section</FONT></TD>
+
+	<TD><FONT FACE="sans-serif, Arial, Helvetica" SIZE="2">BILLNM<BR/><INPUT type="TEXT" MAXLENGTH="18" SIZE="18" NAME="BILLNM"/></FONT></TD>
+    </TR></TABLE><HR/>
+</FORM></body></html>

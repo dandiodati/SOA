@@ -1,0 +1,5 @@
+asr.asr_adminsection.PON, purchase order number
+asr.asr_adminsection.DTSENT.DATE, date sent
+asr.asr_billsection.BILLNM, billing name
+asr.asr_contactsection.INIT_TEL_NO.EXCH, Initiator telephone number exchange
+asr.asr_contactsection.INIT_STREET, Initiator street

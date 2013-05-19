@@ -1,0 +1,116 @@
+-- Copyright(c) 2000 NightFire Software, Inc.
+-- All rights reserved
+
+SecurityModule
+
+DEFINITIONS IMPLICIT TAGS ::= BEGIN
+
+interactiveAgent OBJECT IDENTIFIER ::= {
+  iso(1) org(3) dod(6) internet(1) private(4) enterprises(1) mciwcom(3576) 5 
+}
+
+securityModule  OBJECT IDENTIFIER ::= {
+    iso(1) org(3) dod(6) internet(1) private(4) enterprises(1)
+    mciwcom(3576) 6
+}
+
+
+--EXPORTS everything
+--Useful Types
+BasicMessage ::= CHOICE 
+{
+	basicMessage2 IA5String, --EDI Message
+	basicMessage3 [0] EXPLICIT IA5String, --Plain Text Message
+	basicMessage4 [1] EXPLICIT IA5String --XML Message
+}
+
+AlgorithmIdentifier ::= SEQUENCE 
+{		
+	algorithm OBJECT IDENTIFIER,
+	parameters NULL
+}
+
+	
+Version ::= INTEGER
+v1999 Version ::= 0
+
+--General Syntax
+SecureMessage ::= CHOICE 
+{
+	hashedMessage [0] EXPLICIT HashedMessage,
+	signedMessage [1] EXPLICIT SignedMessage,
+	messageReceipt [2] EXPLICIT IaReceiptMessage
+}
+
+--Hashed Message Syntax
+HashedMessage ::= SEQUENCE 
+{
+	hashedVersion Version DEFAULT v1999 ,
+	hashAlgorithmIdentifier AlgorithmIdentifier,
+	hashedContent BasicMessage, -- Data	
+	messageDigest OCTET STRING ( SIZE (20) )
+}
+
+
+--Signed Message Syntax
+SignedMessage ::= SEQUENCE 
+{
+	signedVersion Version DEFAULT v1999,
+	signedDigestAlgorithms SET OF AlgorithmIdentifier,
+	signedContent BasicMessage, -- Data
+	signerInfos SET OF SEQUENCE 
+	{
+		signerVersion Version DEFAULT v1999,
+		issuerAndSerialNumber SEQUENCE 
+		{
+			issuerCountry SEQUENCE OF SET OF SEQUENCE 
+			{
+				country OBJECT IDENTIFIER,
+				countryValue PrintableString
+			},
+			issuerOrg SEQUENCE OF SET OF SEQUENCE 
+			{
+				organizationName OBJECT IDENTIFIER,
+				organizationValue PrintableString
+			},
+			serialNumber INTEGER
+		},
+		signedDigestAlgorithm AlgorithmIdentifier,
+		digestEncryptionAlgorithm AlgorithmIdentifier,
+		encryptedDigest OCTET STRING
+	}
+}     
+
+--Receipt Message Syntax
+IaReceiptMessage ::= SEQUENCE 
+{
+	uniqueIdentifier UniqueIdentifier, --A unique identifier in the msg
+	dateTimeStamp PrintableString ( SIZE(15) ),
+	enhancements Enhancements OPTIONAL
+}
+
+UniqueIdentifier ::= CHOICE 
+{
+	isaSegment OCTET STRING, --105 byte ISA Segment
+	textHash [0] EXPLICIT OCTET STRING, --20 byte SHA-1 of text
+	xmlHash [1] EXPLICIT OCTET STRING --20 byte SHA-1 of XML
+}
+
+Enhancements ::= CHOICE 
+{
+	withDigest [0] EXPLICIT WithDigest,
+	withDigSig [1] EXPLICIT WithDigSig
+}
+
+WithDigest ::= SEQUENCE 
+{
+	receiptDigestAlgorithm OBJECT IDENTIFIER,
+	receiptMessageDigest OCTET STRING
+}
+
+WithDigSig ::= SEQUENCE 
+{
+	receiptSignatureAlgorithm OBJECT IDENTIFIER,
+	receiptDigitalSignature OCTET STRING
+}
+END

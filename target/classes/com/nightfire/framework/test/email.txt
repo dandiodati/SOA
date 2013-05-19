@@ -1,0 +1,12 @@
+From: abc@nightfire.com
+Sent: Monday, February 07, 2000 7:11 PM
+To: abc@nightfire.com
+Cc: abc@nightfire.com
+Subject: Testing this SMTP EmailUtils class-Test 2
+
+This is a test email
+Lets see how this works
+with the SMTPEmailUtils.
+This is the fourth line in this email
+
+--XYZ

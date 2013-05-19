@@ -1,0 +1,28 @@
+-- Copyright(c) 2000 NightFire Software, Inc.
+-- All rights reserved
+
+Issue2-IAGeneric
+
+DEFINITIONS EXPLICIT TAGS ::=
+BEGIN
+
+eciaAscX12Edi OBJECT IDENTIFIER ::= {
+    iso(1) org(3) dod(6) internet(1) private(4) enterprises(1)
+    mciwcom(3576) 7
+}
+
+IAGeneric ::= SEQUENCE {
+    contentType ContentType,
+    content [0] EXPLICIT ANY DEFINED BY contentType OPTIONAL
+}
+
+ContentType ::= OBJECT IDENTIFIER
+
+-- The first OID gets an extra 0 prepended for some reason
+bogusOID OBJECT IDENTIFIER ::= { eciaAscX12Edi 99 }
+
+plainEDImessage OBJECT IDENTIFIER ::= { eciaAscX12Edi 1 }
+iaReceiptMessage OBJECT IDENTIFIER ::= { eciaAscX12Edi 65 }
+iaStatusMessage OBJECT IDENTIFIER ::= { eciaAscX12Edi 97 }
+
+END

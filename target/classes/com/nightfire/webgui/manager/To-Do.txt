@@ -1,0 +1,6 @@
+1. ManagerDataAdapter and ManagerProtocolAdapter need to be moved to Manager specific
+   depot since it requires MgrCoreConstants among other things.  For now, 
+   ManagerServletConstants contains these needed constants but once the files are
+   moved, the constants will have to go.
+
+   

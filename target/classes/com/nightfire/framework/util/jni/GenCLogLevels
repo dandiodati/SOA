@@ -1,0 +1,274 @@
+#!/usr/local/bin/perl
+#
+# Copyright(c) 2000 NightFire Software, Inc.
+# All rights reserved.
+#
+
+#******************************************************************************
+# Global vars
+$PROG_NAME = "GenCLogLevels";
+%ids = ();
+$currentClass = 0;
+$nextClass = 1;
+$logLevel = 0;
+$maxJavaLevel = 0;
+
+#******************************************************************************
+# "main"
+
+# check the number of arguments
+if (@ARGV != 1)
+{
+  &usage();
+}
+
+# open the input file
+open(SRC, $ARGV[0]) or die("$PROG_NAME: Error opening $ARGV[0]: $!.");
+
+# create the header output file
+&prepareHeader();
+
+# create the table generation file
+&prepareTable();
+
+while(<SRC>)
+{
+  # look for integer declarations
+  if ($_ =~ /\s*public\s+static\s+final\s+int\s+(\w+)\s*=\s*(.+)\s*\;/)
+  {
+    &handleLevelDecl($1, $2);
+  }
+  else
+  {
+    # increment the class level
+    if ($currentClass == $nextClass)
+    {
+      $nextClass++;
+    }
+  }
+}
+
+# now clean up
+&finishHeader();
+&finishTable();
+
+#******************************************************************************
+# Prints a usage statment and exits
+
+sub usage
+{
+  print(STDERR "syntax: GenCLogLevel sourceFile\n");
+  exit(-1);
+}
+
+#******************************************************************************
+# Opens NFLoggerLevel.h and writes static header code
+
+sub prepareHeader
+{
+  my $fName = "NFLoggerLevel.h";
+
+  open(HEADER, ">$fName") or die("$PROG_NAME: Error opening $fName: $!.");
+
+  # output the start of the header file
+  print (HEADER <<END);
+/*
+ * Copyright(c) 2000 Nightfire Software Inc.
+ * All rights reserved.
+ *
+ * NOTE: This file was generated automatically. PLEASE DO NOT EDIT!
+ */
+
+// multiple inclusion protection
+#ifndef _NF_NFLOGGERLEVEL_H_
+#define _NF_NFLOGGERLEVEL_H_
+
+// logging level
+typedef struct
+{
+    unsigned logClass;
+    unsigned logLevel;
+    unsigned javaLevel;
+} NFLogLevel;
+
+// logging levels
+
+END
+}
+
+#******************************************************************************
+# Opens prepareTable.C and writes static header code
+
+sub prepareTable
+{
+  my $fName = "prepareTable.C";
+
+  open(TABLE, ">$fName") or
+    die("$PROG_NAME: Error opening prepareTable.C: $!.");
+
+  print (TABLE <<END);
+/*
+ * Copyright (c) 2000 Nightfire Software, Inc.
+ * All rights reserved.
+ *
+ * NOTE: This file was generated automatically. PLEASE DO NOT EDIT!
+ */
+
+#include <NFLogger.h>
+
+#include <string.h>
+
+//****************************************************************************
+// METHOD:      prepareLevelTable
+//
+// PURPOSE:     Initializes the global table mapping Java to C logging levels
+
+void NFLogger::prepareLevelTable()
+{
+    // zero out the array
+    memset(allLogLevels, 0, sizeof(NFLogLevel) * (NF_MAX_LOG_LEVEL + 1));
+
+    // set known levels
+
+END
+}
+
+#*****************************************************************************
+# Handles a log level declaration
+
+sub handleLevelDecl
+{
+  my($name, $val) = @_;
+  my $alias = "";
+
+  # first, determine whether or not val is a constant
+  if ($val !~ /^\d+$/)
+  {
+    # test for binary addition
+    if ($val =~ /(\w+)\s*\+\s*(\d+)/)
+    {
+      # do the addition operation
+      $val = $ids{$1} + $2;
+    }
+    # othewise, just look up the variable
+    else
+    {
+      $alias = $val;
+      $val = $ids{$val};
+    }
+  }
+
+  # keep max val up to date
+  if ($maxJavaLevel < $val)
+  {
+    $maxJavaLevel = $val;
+  }
+
+  # assign val to name
+  $ids{$name} = $val;
+
+  # now output the level to the appropriate files
+  writeLevelDecl($name, $val, $alias);
+}
+
+#*****************************************************************************
+# Writes logging declarations out to a file
+
+sub writeLevelDecl
+{
+  my($name, $val, $alias) = @_;
+  my $binaryClass;
+  my $binaryLevel;
+  my $tableString;
+
+  # check to see if this is just an alias or a new declaration
+  if ($alias eq "")
+  {
+    # update the level
+    if ($name =~ /ERROR/)
+    {
+      $logLevel = 0;
+    }
+    elsif ($name =~ /WARNING/)
+    {
+      $logLevel = 1;
+    }
+    else
+    {
+      # see if the class just changed
+      if ($currentClass != $nextClass)
+      {
+        $logLevel = 2;
+      }
+      else
+      {
+        $logLevel++;
+      }
+    }
+
+    # update the class to use
+    $currentClass = $nextClass;
+
+    # determine the corresponding mask for the level
+    $binaryClass = 1 << ($currentClass - 1);
+    if ($logLevel <= 1)
+    {
+      $binaryLevel = $logLevel;
+    }
+    else
+    {
+      $binaryLevel = 1 << ($logLevel - 1);
+    }
+
+    # output the logging level declaration
+    printf(HEADER "static const NFLogLevel NF_%-21s= {0x%08x, 0x%08x, %d};\n",
+           $name, $binaryClass, $binaryLevel, $val);
+
+    # output the table assignment
+    $tableString = 'allLogLevels[NF_' . $name . '.javaLevel]';
+    printf(TABLE "    %-50s= NF_%s;\n", $tableString, $name);
+  }
+  else
+  {
+    # output the logging level alias
+    printf(HEADER "static const NFLogLevel NF_%-21s= NF_%s;\n", $name, $alias);
+  }
+}
+
+#******************************************************************************
+# Writes static footer code to NFLoggerLevel.h and closes the file
+
+sub finishHeader
+{
+  my $maxClassVal = (1 << ($currentClass - 1)) + 1;
+
+  # output the max constants
+  print (HEADER "\n\n//must be kept updated\n");
+  print (HEADER "static const unsigned NF_LOG_CLASS_COUNT = $maxClassVal;\n");
+  print (HEADER "static const unsigned NF_MAX_LOG_LEVEL = $maxJavaLevel;\n");
+  
+  # output the end of the header file
+  print (HEADER <<END);
+
+#endif // _NF_NFLOGGERLEVEL_H_
+
+END
+
+  # close the file
+  close(HEADER);
+}
+
+#******************************************************************************
+# Writes static footer code to prepareTable.C and closes the file
+
+sub finishTable
+{
+  # output the end of the file
+  print (TABLE <<END);
+}
+
+END
+
+  # close the file
+  close(TABLE);
+}
