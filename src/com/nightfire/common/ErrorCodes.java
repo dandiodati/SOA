@@ -14,6 +14,8 @@ package com.nightfire.common;
     * The error type is unknown or error could have more than one error types.
     * This is typically used with processing or System errors.
     */
+    
+    //New comment only for testing in github
     public static final int UnknownError = 0;
 
    /**
